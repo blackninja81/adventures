@@ -1,0 +1,247 @@
+# NAI Adventures - Brand Style Guide
+
+## Primary Color Palette
+- Deep Brown: #532D1D (Logo background)
+- Golden Sand: #E5B168 (Mountain lines)
+- Forest Green: #2C4A3B (Trees/Nature elements)
+- Cream: #F5E6D3 (Background/Text contrast)
+- Charcoal: #2A2A2A (Body text)
+
+## Secondary/Accent Colors
+- Sunset Orange: #FF7D55 (Call-to-action elements)
+- Sky Blue: #A4C9E0 (Water/Sky elements)
+- Sage Green: #9CAF88 (Secondary nature elements)
+
+## Typography
+
+### Primary Fonts
+1. Headers/Logo Text: 
+   - "Woodland" or "Adventure" for main titles
+   - Fallback: "Trade Gothic Bold" or "Bebas Neue"
+
+2. Body Text:
+   - Primary: "Open Sans" or "Lato"
+   - Weight variations: Regular (400), Medium (500), Bold (700)
+
+### Font Pairings
+- Headers: Trade Gothic Bold
+- Subheaders: Lato Bold
+- Body: Open Sans Regular
+- Navigation: Lato Medium
+
+## Design Elements
+
+### Iconography Style
+- Line weight: 2px
+- Style: Simple, geometric with rounded corners
+- Icons should follow the mountain/tree motif from logo
+- Consistent 45° angles (matching mountain design)
+
+### Photography Guidelines
+- Natural, earthy tones
+- High contrast outdoor scenes
+- Adventure-focused imagery
+- Landscape orientation preferred
+- Minimal filtering, natural look
+
+### UI Elements
+1. Buttons:
+   - Rounded corners (8px radius)
+   - Solid fill or ghost style
+   - Hover state: slight scale (1.05) and shadow
+
+2. Cards:
+   - Soft shadow: 0px 4px 12px rgba(0,0,0,0.1)
+   - Border radius: 12px
+   - White background with accent color borders
+
+3. Sections:
+   - Maximum width: 1200px
+   - Padding: 80px (desktop), 40px (mobile)
+   - Background variations using primary palette
+
+## Website Specific Considerations
+
+### Layout Hierarchy
+1. Hero Section:
+   - Full-width landscape image
+   - Centered logo overlay
+   - Clear call-to-action button
+
+2. Navigation:
+   - Sticky header with transparent to solid transition
+   - Mobile-friendly hamburger menu
+   - Logo scales on scroll
+
+3. Content Sections:
+   - Grid-based layout
+   - 2-3 columns on desktop
+   - Single column on mobile
+
+### Responsive Breakpoints
+- Mobile: 320px - 767px
+- Tablet: 768px - 1023px
+- Desktop: 1024px+
+
+### Animation Guidelines
+- Subtle fade-ins on scroll
+- Smooth transitions (0.3s duration)
+- Parallax effects for hero images
+- Hover animations for interactive elements
+
+### Technical Requirements
+- Optimize images for web (max 300KB for hero images)
+- Use WebP format with JPEG fallback
+- Implement lazy loading for images
+- Ensure WCAG 2.1 AA compliance
+- Maintain 60fps performance
+
+## Brand Voice
+
+### Tone
+- Adventurous but reliable
+- Friendly and inviting
+- Expert but not pretentious
+- Nature-focused and sustainable
+
+### Writing Style
+- Active voice
+- Short, clear sentences
+- Rich in natural imagery
+- Action-oriented calls to action
+
+
+----------------------------------homepage design------------------------------------------------
+# NAI Adventures - Homepage Structure
+
+## 1. Hero Section
+- Full-screen background video/image slider
+- Main headline and value proposition
+- Primary CTA buttons
+- Dynamic navigation
+
+## 2. Featured Destinations (Popular Adventures)
+- Grid layout with 3-4 featured destinations
+- Large imagery for each destination
+- Quick info: Location, Duration, Price Range
+- Hover effects with quick view option
+- "View All Destinations" CTA
+
+## 3. Why Choose Us
+- 3-4 key differentiators
+- Icon-based design
+- Brief, impactful copy
+- Trust indicators (certifications, years in business, etc.)
+- Social proof numbers (travelers served, destinations, etc.)
+
+## 4. Adventure Categories
+- Visual cards for different types:
+  - Mountain Expeditions
+  - Wildlife Safaris
+  - Cultural Immersions
+  - Desert Adventures
+  - Tropical Escapes
+- Category-specific imagery and icons
+- Quick category description
+- "Explore More" link for each
+
+## 5. Featured Experience/Trip Spotlight
+- Highlighted seasonal or popular trip
+- Large imagery or video background
+- Key trip details
+- Special offer or unique selling point
+- Direct booking CTA
+
+## 6. Testimonials & Reviews
+- Carousel/slider format
+- Customer photos with testimonials
+- Star ratings
+- Trip type mentioned
+- Integration with review platforms (TripAdvisor, etc.)
+
+## 7. Instagram Feed Section
+- Grid of recent Instagram posts
+- Adventure-focused imagery
+- Social proof through user-generated content
+- "Follow Us" CTA
+- Hashtag promotion
+
+## 8. Travel Planning Tools
+- Trip finder quiz
+- Season/weather guide
+- Difficulty level guide
+- Budget calculator
+- Quick contact form
+
+## 9. Latest Blog Posts
+- 3-4 recent articles
+- Travel tips, destination guides, adventure stories
+- Featured image for each
+- Brief excerpt
+- Reading time estimate
+- "View All Posts" CTA
+
+## 10. Newsletter Signup
+- Adventure-focused imagery background
+- Compelling copy about exclusive offers
+- Simple email input
+- Privacy reassurance
+- Sign-up incentive (e.g., travel guide download)
+
+## 11. Footer
+### Primary Footer
+- Quick links to popular destinations
+- Adventure categories
+- About us summary
+- Contact information
+- Social media links
+### Secondary Footer
+- Legal links
+- Payment methods accepted
+- Certifications
+- Partner logos
+
+## Technical Considerations
+- Lazy loading for images
+- Progressive web app capabilities
+- Mobile-first approach
+- Speed optimization
+- SEO best practices
+
+## Animation Strategy
+- Subtle scroll-triggered animations
+- Hover effects on interactive elements
+- Smooth transitions between sections
+- Performance-conscious implementation
+
+## Call-to-Action Strategy
+### Primary CTAs
+- "Start Planning"
+- "Book Now"
+- "Explore Destinations"
+
+### Secondary CTAs
+- "Learn More"
+- "View Details"
+- "Get Inspired"
+
+## Content Loading Priority
+1. Hero Section
+2. Featured Destinations
+3. Why Choose Us
+4. Adventure Categories
+5. Remaining sections
+
+## Mobile Considerations
+- Simplified navigation
+- Optimized images
+- Touch-friendly interface
+- Reduced animation
+- Prioritized content
+
+## Conversion Elements
+- Floating booking button
+- Quick contact form
+- WhatsApp/chat integration
+- Emergency contact
+- Booking calendar integration
