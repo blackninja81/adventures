@@ -18,6 +18,7 @@ const Choice = () => {
           <i className="icon-expert"></i>
           <Image
           src={team}
+          alt='team'
           height={100}
           width={100}
           />
@@ -29,6 +30,7 @@ const Choice = () => {
           <i className="icon-customer"></i>
           <Image
           src={support}
+          alt='team'
           height={100}
           width={100}
           />
@@ -40,11 +42,12 @@ const Choice = () => {
           <i className="icon-tailored"></i>
           <Image
           src={expirience}
+          alt='team'
           height={100}
           width={100}
           />
           <h3>Tailored Itineraries</h3>
-          <p>We create personalized itineraries based on your preferences, whether you're seeking adventure or relaxation.</p>
+          <p>We create personalized itineraries based on your preferences, whether you&apos;re seeking adventure or relaxation.</p>
         </div>
 
         <div className="grid-item">
@@ -52,6 +55,7 @@ const Choice = () => {
           <Image
           src={price}
           height={100}
+          alt='team'
           width={100}
           />
           <h3>Affordable Pricing</h3>
@@ -63,6 +67,7 @@ const Choice = () => {
           <Image
           src={memory}
           height={100}
+          alt='team'
           width={100}
           />
           <h3>Unforgettable Memories</h3>
