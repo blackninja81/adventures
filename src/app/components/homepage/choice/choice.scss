@@ -1,0 +1,103 @@
+$primary-color-1:#532D1D;
+$primary-color-2:#E5B168;
+$primary-color-3:#2C4A3B;
+$primary-color-4:#F5E6D3;
+$primary-color-5:#2A2A2A;
+
+$secondary-color-1:#FF7D55;
+$secondary-color-2:#A4C9E0;
+$secondary-color-3:#9CAF88;
+
+@font-face {
+    font-family: "Cormorant";
+    src: url("../../../fonts/BebasNeue-Regular.ttf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Cormorant-body";
+    src: url("../../../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+    font-weight: normal;
+}
+
+.choice-container {
+    padding: 40px 20px;
+    text-align: center;
+  
+    h2 {
+      font-size: 36px;
+      font-family: 'Cormorant', serif;
+      color: $primary-color-1;
+    }
+  
+    .subheading {
+      font-size: 18px;
+      color: $primary-color-5;
+      margin-bottom: 30px;
+    }
+  
+    .grid {
+      display: grid;
+      gap: 30px;
+      margin-bottom: 40px;
+      font-family: "Cormorant-body";
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  
+      .grid-item {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        text-align: center;
+        
+        i {
+          font-size: 40px;
+          color: $primary-color-1;
+          margin-bottom: 20px;
+        }
+  
+        h3 {
+          font-size: 24px;
+          font-family: 'Cormorant', serif;
+          color: $primary-color-1;
+          margin-bottom: 10px;
+        }
+  
+        p {
+          font-size: 16px;
+          color: $primary-color-3;
+        }
+      }
+      .grid-item:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    }
+  
+    .cta {
+      margin-top: 40px;
+  
+      p {
+        font-size: 18px;
+        color: $primary-color-5;
+        margin-bottom: 20px;
+      }
+  
+      .cta-button {
+        padding: 15px 30px;
+        background-color: $secondary-color-1;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 4px;
+        text-decoration: none;
+  
+        &:hover {
+          background-color: $secondary-color-2;
+        }
+      }
+    }
+  }
+  
