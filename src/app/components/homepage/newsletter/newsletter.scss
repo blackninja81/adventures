@@ -1,31 +1,117 @@
-$primary-color-1:#532D1D;
-$primary-color-2:#E5B168;
-$primary-color-3:#2C4A3B;
-$primary-color-4:#F5E6D3;
-$primary-color-5:#2A2A2A;
+// Color Variables
+$primary-color-1: #532D1D;
+$primary-color-2: #E5B168;
+$primary-color-3: #2C4A3B;
+$primary-color-4: #F5E6D3;
+$primary-color-5: #2A2A2A;
 
-$secondary-color-1:#FF7D55;
-$secondary-color-2:#A4C9E0;
-$secondary-color-3:#9CAF88;
+$secondary-color-1: #FF7D55;
+$secondary-color-2: #A4C9E0;
+$secondary-color-3: #9CAF88;
 
+// Font Face Declarations
 @font-face {
     font-family: "Cormorant";
     src: url("../../../fonts/BebasNeue-Regular.ttf");
     font-weight: normal;
 }
+
 @font-face {
     font-family: "Cormorant-body";
     src: url("../../../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
     font-weight: normal;
 }
 
-.news-container{
-    height: 50vh;
-    h2{
+// Google Fonts Import
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+
+// News Container Styles
+.news-container {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    height: 60vh;
+    justify-content: center;background-attachment: fixed; // This creates the parallax effect
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    h2 {
         padding: 20px 0;
-      text-align: center;
-      font-size: 40px;
-      font-family: 'Cormorant', serif;
-      color: $primary-color-1;
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Cormorant', serif;
+        color: $primary-color-1; // Use primary color variable
+    }
+}
+
+// Subscribe Styles
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color-4;
+    width: 945px;
+    height: 474px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px #532D1D;
+
+    &__title {
+        font-weight: bold;
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+
+    &__copy {
+        max-width: 450px;
+        text-align: center;
+        margin-bottom: 53px;
+        line-height: 1.5;
+    }
+
+    .form {
+        margin-bottom: 25px;
+
+        &__email {
+            padding: 20px 25px;
+            border-radius: 5px;
+            border: 1px solid #CAD3DB; // Consider using a variable if needed
+            width: 431px;
+            font-size: 18px;
+            color: #0F121F;
+
+            &:focus {
+                outline: 1px solid #532D1D; // Consider using a variable if needed
+            }
+        }
+
+        &__button {
+            background: $primary-color-1; // Consider using a variable if needed
+            padding: 10px;
+            border: none;
+            width: 244px;
+            height: 65px;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            transition: .5s;
+            box-shadow: 0 4px 20px #532D1D;
+
+            &:hover {
+                box-shadow: 0 10px 20px #884021;
+            }
+        }
+    }
+
+    .notice {
+        width: 345px;
+
+        input[type="checkbox"] {
+            margin-right: 10px; // Add some spacing between checkbox and text
+        }
+        
+        &__copy {
+            display:inline-block; // Ensure it aligns properly with the checkbox
+        }
     }
 }
