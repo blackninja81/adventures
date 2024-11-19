@@ -17,7 +17,7 @@ export default function Home() {
         <Choice/>
         <Categories/>
         <Testimonials/>
-        <Instagram/>
+        {/* <Instagram/> */}
         <Blog/>
         <Newsletter/>
       </p>
