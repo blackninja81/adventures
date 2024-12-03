@@ -7,7 +7,7 @@ const Newsletter = () => {
     style={{ backgroundImage: `url(/assets/images/peru.webp)` }}
     >
     <div className="subscribe">
-      <h2 className="subscribe__title">Let's keep in touch</h2>
+      <h2 className="subscribe__title">Let us keep in touch</h2>
       <p className="subscribe__copy">
         Subscribe to keep up with fresh news and exciting updates. We promise not to spam you!
       </p>
