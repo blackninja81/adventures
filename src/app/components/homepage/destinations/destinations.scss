@@ -29,6 +29,15 @@ $secondary-color-3:#9CAF88;
       font-size: 40px;
       font-family: 'Cormorant', serif;
       color: $primary-color-1;
+
+      @media screen and (max-width: 768px) {
+        font-size: 28px;
+        padding: 10px 0;
+      }
+
+      @media screen and (max-width: 480px) {
+        font-size: 24px;
+      }
     }
   
     .grid {
@@ -37,23 +46,49 @@ $secondary-color-3:#9CAF88;
       grid-auto-rows: 350px;
       gap: 20px;
       padding: 20px;
+
+      @media screen and (max-width: 1200px) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-rows: 300px;
+        gap: 15px;
+        padding: 15px;
+      }
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: 250px;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      @media screen and (max-width: 480px) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+        gap: 10px;
+        padding: 5px;
+      }
   
       .grid-item {
         position: relative;
         overflow: hidden;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #ccc; /* Default background color for fallback */
+        background-color: #ccc;
   
         &:nth-child(2n) {
           grid-column: span 1;
           grid-row: span 2;
+
+          @media screen and (max-width: 480px) {
+            grid-column: span 1;
+            grid-row: span 1;
+          }
         }
   
         .image-wrapper {
           position: relative;
           width: 100%;
-          height: 100%; /* Ensure the image fills the parent container */
+          height: 100%;
         }
   
         .overlay {
@@ -67,11 +102,13 @@ $secondary-color-3:#9CAF88;
           display: flex;
           opacity: 0;
           transition: opacity 0.3s ease;
-          z-index: 2; /* Ensure the overlay is on top of the image */
-          .overlay-text{
+          z-index: 2;
+          
+          .overlay-text {
             top: 50%;
             left: 40%;
           }
+          
           h3 {
             font-size: 5rem;
             font-family: 'Cormorant', sans-serif;
@@ -81,13 +118,28 @@ $secondary-color-3:#9CAF88;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+
+            @media screen and (max-width: 1200px) {
+              font-size: 4rem;
+            }
+
+            @media screen and (max-width: 768px) {
+              font-size: 3rem;
+            }
+
+            @media screen and (max-width: 480px) {
+              font-size: 2.5rem;
+            }
           }
         }
   
         &:hover .overlay {
           opacity: 1;
+
+          @media screen and (max-width: 480px) {
+            opacity: 0.8;
+          }
         }
       }
     }
   }
-  
