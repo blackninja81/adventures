@@ -1,62 +1,108 @@
-@import '../../../globals';
+// Color Palette
+$p-brown: #532D1D; // $primary-color-1
+$p-gold: #E5B168;  // $primary-color-2
+$p-green: #2C4A3B; // $primary-color-3
+$p-sand: #F5E6D3;  // $primary-color-4
 
-@font-face {
-    font-family: "Cormorant";
-    src: url("../../../fonts/BebasNeue-Regular.ttf");
-    font-weight: normal;
-}
-@font-face {
-    font-family: "Cormorant-body";
-    src: url("../../../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
-    font-weight: normal;
-}
+.blog-container {
+    padding: 80px 5%;
+    background-color: white;
 
-.blog-container{
-    h2{
-        padding: 20px 0;
-      text-align: center;
-      font-size: 40px;
-      font-family: 'Cormorant', serif;
-      color: $primary-color-1;
+    .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+
+        span {
+            font-family: "Cormorant-body", sans-serif;
+            color: $p-gold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: 'Cormorant', serif;
+            font-size: clamp(32px, 5vw, 45px);
+            color: $p-brown;
+            margin-top: 5px;
+        }
     }
-    .splide-slide{
-        margin: 5px;
-        gap: 10px;
+}
+
+.blog-card {
+    background-color: $p-sand;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    margin-bottom: 40px; // Space for pagination dots
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba($p-brown, 0.1);
+    }
+
+    .card-image {
+        position: relative;
+        height: 250px;
+        width: 100%;
+    }
+
+    .card-content {
+        padding: 25px;
         display: flex;
         flex-direction: column;
-        font-family: "Cormorant-body";
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        border-radius: 10px;
-        background-color: $primary-color-4;
-        h3{
-            font-size: 30px;
-            font-family: "Cormorant";
+        flex-grow: 1;
+
+        h3 {
+            font-family: 'Cormorant', serif;
+            font-size: 24px;
+            color: $p-brown;
+            margin-bottom: 12px;
         }
-        h4{
-            padding: 0 40px;
+
+        p {
+            font-family: "Cormorant-body", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: $p-green;
+            margin-bottom: 20px;
+            // Limit text to 3 lines
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
-        img{
-            width: 100%;
-            height: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        button{
-            border-radius: 10px;
-            margin: 10px;
-            width: 200px;
-            padding: 20px;
+
+        .read-more {
+            margin-top: auto;
+            align-self: flex-start;
+            background-color: $p-brown;
             color: white;
-            transition: .5s;
-            background-color: black;
-            
-        }
-        button:hover{
-            color: black;
-            border: 1px solid black;
-            background-color: white;
+            border: 2px solid $p-brown;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+
+            &:hover {
+                background-color: transparent;
+                color: $p-brown;
+            }
         }
     }
+}
+
+// Splide Customization
+.splide__pagination__page.is-active {
+    background: $p-gold;
+}
+
+.splide__arrow {
+    background: rgba($p-brown, 0.8);
+    svg { fill: white; }
+    &:hover { background: $p-brown; }
 }

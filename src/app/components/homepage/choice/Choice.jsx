@@ -1,80 +1,74 @@
+"use client";
 import React from 'react';
 import './choice.scss';
 import Image from 'next/image';
-import team from '../../../../../public/assets/logos/team.png'
-import support from '../../../../../public/assets/logos/support.png'
-import expirience from '../../../../../public/assets/logos/adventure.png'
-import price from '../../../../../public/assets/logos/money.png'
-import memory from '../../../../../public/assets/logos/memory.png'
+
+// Assets
+import team from '../../../../../public/assets/logos/team.png';
+import support from '../../../../../public/assets/logos/support.png';
+import adventure from '../../../../../public/assets/logos/adventure.png';
+import money from '../../../../../public/assets/logos/money.png';
+import memory from '../../../../../public/assets/logos/memory.png';
+
+const choices = [
+  {
+    id: 1,
+    img: team,
+    title: "Expert Team",
+    desc: "Our team consists of industry leaders with over 10 years of experience in global travel."
+  },
+  {
+    id: 2,
+    img: support,
+    title: "24/7 Support",
+    desc: "We prioritize your needs and offer around-the-clock support wherever you are."
+  },
+  {
+    id: 3,
+    img: adventure,
+    title: "Tailored Itineraries",
+    desc: "Personalized journeys based on your preferences, from rugged peaks to calm waters."
+  },
+  {
+    id: 4,
+    img: money,
+    title: "Affordable Pricing",
+    desc: "Offering top-notch services and luxury experiences at competitive market rates."
+  },
+  {
+    id: 5,
+    img: memory,
+    title: "Unique Memories",
+    desc: "We strive to create moments that stay with you forever through rare local experiences."
+  }
+];
 
 const Choice = () => {
   return (
-    <div className="choice-container">
-      <h2>Why Choose Us?</h2>
-      <p className="subheading">Discover what sets us apart from the competition.</p>
-      
-      <div className="grid">
-        <div className="grid-item">
-          <i className="icon-expert"></i>
-          <Image
-          src={team}
-          alt='team'
-          height={100}
-          width={100}
-          />
-          <h3>Expert Team</h3>
-          <p>Our team consists of industry leaders with over 10 years of experience.</p>
-        </div>
-        
-        <div className="grid-item">
-          <i className="icon-customer"></i>
-          <Image
-          src={support}
-          alt='team'
-          height={100}
-          width={100}
-          />
-          <h3>Customer-Centric Approach</h3>
-          <p>We prioritize your needs and offer 24/7 support.</p>
-        </div>
-
-        <div className="grid-item">
-          <i className="icon-tailored"></i>
-          <Image
-          src={expirience}
-          alt='team'
-          height={100}
-          width={100}
-          />
-          <h3>Tailored Itineraries</h3>
-          <p>We create personalized itineraries based on your preferences, whether you&apos;re seeking adventure or relaxation.</p>
-        </div>
-
-        <div className="grid-item">
-          <i className="icon-affordable"></i>
-          <Image
-          src={price}
-          height={100}
-          alt='team'
-          width={100}
-          />
-          <h3>Affordable Pricing</h3>
-          <p>Offering top-notch services at competitive rates.</p>
-        </div>
-
-        <div className="grid-item">
-          <i className="icon-memories"></i>
-          <Image
-          src={memory}
-          height={100}
-          alt='team'
-          width={100}
-          />
-          <h3>Unforgettable Memories</h3>
-          <p>We strive to create moments that will stay with you for a lifetime, with unique adventures and experiences.</p>
-        </div>
+    <section className="choice-container">
+      <div className="header-area">
+        <h2>Why Choose Us?</h2>
+        <p className="subheading">Discover what sets NAI Adventures apart from the rest.</p>
       </div>
-    </div>
+      
+      <div className="choice-grid">
+        {choices.map((item) => (
+          <div key={item.id} className="choice-card">
+            <div className="icon-box">
+              <Image
+                src={item.img}
+                alt={item.title}
+                height={70}
+                width={70}
+                className="choice-icon"
+              />
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

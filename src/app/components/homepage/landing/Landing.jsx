@@ -1,68 +1,80 @@
 "use client";
+
 import React, { useEffect, useRef } from "react";
-import "./landing.scss";
-import logo from "../../../../../public/assets/logos/logo21.png"
 import Image from "next/image";
-import landing from "../../../../../public/assets/images/landing.webp";
+import "./landing.scss";
+
+// Assets
+import logo from "../../../../../public/assets/logos/logo21.png";
+import landingImg from "../../../../../public/assets/images/landing.webp";
 
 const LandingSection = () => {
-  const parallaxRef = useRef(null);
+  const parallaxRef = useRef(null); // Removed <HTMLDivElement>
 
   useEffect(() => {
-    const parallaxElement = parallaxRef.current;
-    let ticking = false;
-    let lastScrollY = window.pageYOffset;
-
-    const updateParallax = () => {
-      const scrollY = window.pageYOffset;
-      const translateY = scrollY * 0.5;
-      parallaxElement.style.transform = `translate3d(0, ${translateY}px, 0)`;
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      lastScrollY = window.pageYOffset;
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          updateParallax();
-          ticking = false;
-        });
-        ticking = true;
+    let requestRef; // Removed : number
+    
+    const handleScroll = () => {
+      if (parallaxRef.current) {
+        // Subtle parallax depth
+        const scrolled = window.scrollY;
+        parallaxRef.current.style.transform = `translate3d(0, ${scrolled * 0.3}px, 0)`;
       }
+      requestRef = requestAnimationFrame(handleScroll);
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-
+    requestRef = requestAnimationFrame(handleScroll);
+    
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      if (requestRef) {
+        cancelAnimationFrame(requestRef);
+      }
     };
   }, []);
 
   return (
-    <div className="landing-container">
+    <section className="landing-container">
       <div ref={parallaxRef} className="parallax-wrapper">
         <Image
-          className="landing-image"
-          src={landing}
-          alt="landing-page image"
-          layout="fill"
-          objectFit="cover"
+          src={landingImg}
+          alt="NAI Adventures Scenic Background"
+          fill
           priority
+          quality={90}
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
         />
       </div>
+      
       <div className="overlay"></div>
-      <span className="text">
-        <Image src={logo} alt="logo" width={300} height={300} />
-        <h1>Nai Adeventures</h1>
-        <p>
-        Discover the world beyond the ordinary with NAI Adventures. From rugged mountain trails to serene lakeside retreats, we bring you closer to nature’s hidden wonders. Embrace the thrill, explore new horizons, and create memories that last a lifetime. Your next adventure starts here
+
+      <div className="content-box">
+        <div className="logo-container">
+          <Image 
+            src={logo} 
+            alt="Nai Adventures Logo" 
+            width={220} 
+            height={220} 
+            priority
+            className="main-logo"
+          />
+        </div>
+        
+        <h1 className="hero-title">Nai Adventures</h1>
+        
+        <p className="hero-description">
+          Discover the world beyond the ordinary with NAI Adventures. From rugged 
+          mountain trails to serene lakeside retreats, we bring you closer to 
+          nature’s hidden wonders. Embrace the thrill, explore new horizons, 
+          and create memories that last a lifetime.
         </p>
-        <span className="landing-button-container">
-          <button className="nav-contact-us">Book an Adventure</button>
-          <button className="nav-contact-us">Contact Us</button>
-        </span>
-      </span>
-    </div>
+
+        <div className="button-group">
+          <button className="btn-outline">Book an Adventure</button>
+          <button className="btn-filled">Contact Us</button>
+        </div>
+      </div>
+    </section>
   );
 };
 
