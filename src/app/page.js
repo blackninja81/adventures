@@ -1,26 +1,26 @@
-import Image from "next/image";
-import Newsletter from "./components/homepage/newsletter/Newsletter";
-import Instagram from "./components/homepage/instagram/Instagram";
-import Testimonials from "./components/homepage/testimonials/Testimonials";
-import Categories from "./components/homepage/categories/Categories";
-import Choice from "./components/homepage/choice/Choice";
-import Blog from "./components/homepage/blog/blog";
-import Destinations from "./components/homepage/destinations/Destinations";
+import dynamic from 'next/dynamic';
+
+// Critical components (Load immediately)
 import LandingSection from "./components/homepage/landing/Landing";
+import Destinations from "./components/homepage/destinations/Destinations";
+
+// Non-critical components (Load as user scrolls)
+const Choice = dynamic(() => import("./components/homepage/choice/Choice"), { ssr: true });
+const Categories = dynamic(() => import("./components/homepage/categories/Categories"), { ssr: true });
+const Testimonials = dynamic(() => import("./components/homepage/testimonials/Testimonials"), { ssr: true });
+const Blog = dynamic(() => import("./components/homepage/blog/blog"), { ssr: true });
+const Newsletter = dynamic(() => import("./components/homepage/newsletter/Newsletter"), { ssr: true });
 
 export default function Home() {
   return (
-    <div>
-      <p>
-        <LandingSection/>
-        <Destinations/>
-        <Choice/>
-        <Categories/>
-        <Testimonials/>
-        {/* <Instagram/> */}
-        <Blog/>
-        <Newsletter/>
-      </p>
-    </div>
+    <>
+      <LandingSection />
+      <Destinations />
+      <Choice />
+      <Categories />
+      <Testimonials />
+      <Blog />
+      <Newsletter />
+    </>
   );
 }
